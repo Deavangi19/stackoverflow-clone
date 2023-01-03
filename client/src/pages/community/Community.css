@@ -1,0 +1,87 @@
+@media (min-width: 320px) {
+  .community-home-container {
+    margin-top: 3.2rem;
+    width: 100%;
+    position: relative;
+  }
+  .community-home-container h3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 3.3rem;
+    border-radius: 0.2rem;
+    position: static;
+    background-color: #ff6347;
+    top: 5%;
+    align-items: center;
+  }
+  .community-new-post {
+    background-color: #f8bdb3;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    box-shadow: var(--blashis-violet-shadow);
+  }
+  .community-new-post form {
+    max-width: 99%;
+  }
+  .newpost-form {
+    padding: 0.4rem;
+    width: inherit;
+  }
+  .newpost-form label,
+  label textarea {
+    width: 100%;
+    border-radius: 0.4rem;
+    height: 5.2rem;
+    border: none;
+    outline: none;
+    resize: none;
+  }
+  textarea {
+    padding: 0.5rem 0.2rem;
+  }
+  .form-btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.4rem;
+  }
+  .form-btn .btn {
+    position: relative;
+    bottom: 0%;
+    background: transparent;
+    border: none;
+    color: #ff6347;
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  .form-btn .btn:hover {
+    color: rgb(78, 112, 172);
+  }
+  .form-btn .submit-btn {
+    border: solid 1px #ff6347;
+    border-radius: 0.4rem;
+
+    background-color: #ff6347;
+
+    color: #f8bdb3;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    padding: 0.3rem 1.3rem;
+    transition: 0.3ms;
+  }
+  .form-btn .submit-btn:hover {
+    color: #ffff;
+  }
+  .community-posts {
+    margin: 2.3rem 0 0 0;
+    padding: 1.4rem;
+    border-radius: 0.3rem;
+  }
+}
+@media (min-width: 786px) {
+  .community-home-container {
+    margin-top: 1.2rem;
+    min-width: calc(100% - 264px);
+  }
+}
