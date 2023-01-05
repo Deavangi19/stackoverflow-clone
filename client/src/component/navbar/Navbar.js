@@ -8,14 +8,16 @@ import "./Navbar.css"
 import decode from "jwt-decode";
 import logo  from '../../assets/logo.png'
 import {Menu} from "./Menu";
-
+import { useNavigate } from 'react-router-dom'
 
 function Navbar() {
    const dispatch=useDispatch()
+   const navigate=useNavigate()
    const [iconShow,setIconShow]=useState(false)
    const {currentUser:User}= useSelector((state)=>state.user)
    const logOut=()=>{
-      dispatch(removeCurrentUser())
+      dispatch(removeCurrentUser(),
+      navigate("/auth"))
    }
    useEffect(()=>{
       const token=User?.token
@@ -55,12 +57,12 @@ function Navbar() {
              (<div className={'logout'}>
                <Link className={'avatar-id'} to={`/user/${User?.result?._id}`} style={{textDecoration:'none'}}>
                   <Avatar
-                     backgroundColor={'#009dff'}
-                     px={'12px'}
-                     py={'6px'}
+                     // backgroundColor={'#009dff'}
+                     src={User?.result?.avatar?.url}
                      borderRadius={'50%'}
                      children={User?.result.name}
                      color="white"
+                     className={"avatar-navbar"}
                   />
                </Link>
                <Button id={'logout-btn-id'} onClick={logOut} className={"nav-item nav-links"} >

@@ -37,12 +37,11 @@ const UserProfile=()=>{
                         <section>
                             <div className={'user-details-container'}>
                                 <div className={'user-details'}>
-                                <Avatar
-                                    backgroundColor={'purple'}
+                                <Avatar                                  
                                     color={'white'}
-                                    fontSize={'50px'}
-                                    px={'40px'}
-                                    py={'30px'}
+                                    className="avatar-user"
+                                    fontSize={'50px'}                                   
+                                    src={user.avatar?.url}
                                     children={user.name?.charAt(0).toUpperCase()}
                                 />
                                 <div className={'user-name'}>

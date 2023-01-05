@@ -10,6 +10,7 @@ const Post = ({post}) => {
   function handleDelete(){
     
   }
+ 
   return (
     <div className='post-card'>
       <div className="post-header">
@@ -21,9 +22,9 @@ const Post = ({post}) => {
                     px={'0.3rem'}
                     py={'0.5rem'}
                     borderRadius={'10%'}
-                    children={post?.postedBy}
+                    children={post?.postedBy?.name}
                   />
-                  <Link>{post?.postedBy}</Link>
+                  <Link>{post?.postedBy?.name}</Link>
               </div>
               <div style={{flexGrow:1}}/>
               <div className="post-function">
@@ -34,8 +35,8 @@ const Post = ({post}) => {
          </div>
          {post?.caption?<div className="post-caption">{post?.caption}</div>:null}
       </div>
-      {post?.post_url?<div className="post-body">
-        <img alt={'https://unsplash.com/photos/ZSS9oOHf8S8'} src={post?.post_url}/>
+      {post?.image?<div className="post-body">
+        <img alt={'https://unsplash.com/photos/ZSS9oOHf8S8'} src={post?.image?.url}/>
       </div>:null}
       <div className="post-interactions">
         <div className="like">

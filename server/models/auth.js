@@ -18,8 +18,25 @@ const userSchema =new mongoose.Schema({
         minlength: [8, 'Password must be at least 8 characters'],
         select: false,
     },
+    avatar:{
+        public_id:{type:String,default:""},
+        url:{type:String,default:"https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"}
+    },
     about:{type:String},
     tags:[{type:String}],
+    friend:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User"
+    }],
+    following:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User"
+    }],
+    followers:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User"
+    }],
+
     joinedOn: {type: Date,default: Date.now},
 })
 
